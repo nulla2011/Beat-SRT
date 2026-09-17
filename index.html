@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>节奏字幕生成器</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="mt-24 mb-20 text-center font-bold">节奏字幕生成器</h1>
+  </header>
+  <main class="border mx-auto w-[32rem] p-6">
+    <div>开始时间</div>
+    <div class="join">
+      <input id="startH" class="join-item input input-bordered input-primary input-sm w-32" placeholder="hour"
+        type="number" value="0" min="0" />
+      <span class="join-item semicolon">:</span>
+      <input id="startM" class="join-item input input-bordered input-primary input-sm w-32" placeholder="minute"
+        type="number" value="0" min="0" max="59" />
+      <span class="join-item semicolon">:</span>
+      <input id="startS" class="join-item input input-bordered input-primary input-sm w-32" placeholder="second"
+        type="number" value="0" min="0" />
+    </div>
+    <div>时长</div>
+    <div class="join">
+      <input id="lengthH" class="join-item input input-bordered input-primary input-sm w-32" placeholder="hour"
+        type="number" value="0" min="0" />
+      <span class="join-item semicolon">:</span>
+      <input id="lengthM" class="join-item input input-bordered input-primary input-sm w-32" placeholder="minute"
+        type="number" value="0" min="0" max="59" />
+      <span class="join-item semicolon">:</span>
+      <input id="lengthS" class="join-item input input-bordered input-primary input-sm w-32" placeholder="second"
+        type="number" value="0" min="0" />
+    </div>
+    <div>BPM</div>
+    <div>
+      <input id="BPM" class="input input-bordered input-primary input-sm w-32" type="number" value="120" min="0.01" />
+    </div>
+    <div>拍号</div>
+    <div>
+      <input id="sigTop" class="input input-bordered input-primary input-sm w-32" type="number" value="4" min="1" />
+      <span>/</span>
+      <input id="sigBottom" class="input input-bordered input-primary input-sm w-32" type="number" value="4" min="1" />
+    </div>
+    <button id="generate" class="btn btn-wide btn-accent">生成</button>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
